@@ -6,6 +6,12 @@ def index(request):
     return render(request, 'index.html')
 
 def contato(request):
+    if request.method == "POST":
+        nome = request.POST.get("nome")
+        email = request.POST.get("email")
+        senha = request.POST.get("password")
+        print("Novo contato: Nome: {}, Email: {}, Senha {}".format(nome, email, senha))
+
     return render(request, 'contato.html')
 
 def login(request):

@@ -6,5 +6,12 @@
     </head>
     <body>
         <h1>Contato HTML</h1>
+	<form class="" action="" method="post">{% csrf_token %}
+            <span>{{ error }}</span><br/><br/>
+            <input type="text" name="email"><br/>
+	    <input type="text" name="nome"><br/>
+	    <input type="password" name="senha"><br/><br/>
+            <input type="submit" value="contato">
+        </form>
     </body>
 </html>
